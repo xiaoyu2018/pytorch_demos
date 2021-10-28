@@ -1,0 +1,9 @@
+
+DEVICE="cuda:0"
+BATCH_SIZE=1024
+EPOCH=20
+DATA_DIR="D:/2021UCAS/机器学习/大作业/pytorch_learning/pytorch_demos/声音分类_BP_LSTM/dataset/timit_11"
+VAL_RATIO=0.1
+FEAUTRES=429
+NUM_CLASS=39
+LEARNING_RATE=0.001
