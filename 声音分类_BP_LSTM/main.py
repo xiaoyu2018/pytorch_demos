@@ -97,8 +97,7 @@ def Pred(lstm=False):
             out=net(X)
             _,pred=torch.max(out,dim=1)
 
-            for y in pred.cpu():
-                
+            for y in pred.cpu(): 
                 predict.append(y.item())
         
     with open("submission.csv","w") as f:
