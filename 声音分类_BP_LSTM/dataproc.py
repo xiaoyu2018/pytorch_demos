@@ -1,4 +1,3 @@
-from torch._C import dtype
 from torch.utils.data.dataloader import DataLoader
 from torch.utils.data.dataset import Dataset
 import numpy as np
@@ -31,7 +30,7 @@ def GetTimit11(train=True):
         X=np.load(os.path.join(settings.DATA_DIR,"train_11.npy"))
         y=np.load(os.path.join(settings.DATA_DIR,"train_label_11.npy")).astype(np.int64)
         val_index=int(settings.VAL_RATIO*y.size)
-
+        # 这里有问题，应该要先随机化的。
         x_train,y_train,x_val,y_val=X[val_index:],y[val_index:],X[:val_index],y[:val_index]
         ret=(DataLoader(dataset=Timit11(x_train,y_train),shuffle=True,batch_size=settings.BATCH_SIZE),
             DataLoader(dataset=Timit11(x_val,y_val),batch_size=settings.BATCH_SIZE))
