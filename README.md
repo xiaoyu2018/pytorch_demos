@@ -1,2 +1,2 @@
 # pytorch_demos
- little exmaples for pytorch learning
+ small examples for pytorch learning
